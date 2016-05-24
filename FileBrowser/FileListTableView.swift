@@ -104,6 +104,7 @@ extension FileListViewController: UITableViewDataSource, UITableViewDelegate {
 			do
 			{
 				try NSFileManager.defaultManager().removeItemAtURL(file.filePath)
+				tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
 			}
 			catch{}
 			
